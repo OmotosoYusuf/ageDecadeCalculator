@@ -1,0 +1,68 @@
+<!-- I want to create a prompt that will accept a user's age and return to the screen the user's age and how many decades s/he has lived -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>getBirthAndDecade</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: serif;
+        }
+
+        body {
+            background-color: rgba(35, 35, 75, 0.795);
+            color: goldenrod;
+            font-size: 1.5em;
+            font-weight: 900;
+            width: 50%;
+            margin: 15% auto;
+            text-align: center;
+            border: 3px solid salmon;
+            padding: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div id="printResult"></div>
+    </div>
+
+
+    <script>
+        let usersYear;
+        let result;
+        do {
+            usersYear = prompt(`Please enter your year of birth in _ _ _ _`);
+
+        } while (usersYear.length < 4 || isNaN(usersYear) || usersYear.length > 4);
+
+
+
+        let date = new Date();
+        let year = date.getFullYear();
+        let age = parseInt(year - usersYear);
+        document.write(`You are ${age} year(s) of age`);
+        console.log(typeof (age));
+
+        let aDecade = 10;
+        if (age > aDecade) {
+
+            let div = document.querySelector('#printResult');
+            let decadeValue = (age / aDecade);
+            div = Math.floor(decadeValue);
+            document.write('<br><br> & <br>')
+            div.innerHTML = document.write(`<br> You have lived for ${div} decade(s)`);
+
+            // aDecade += 10;
+        } else{
+            document.write('<br><br> You are either to old or a well growing kid, try after some time');
+        }
+    </script>
+</body>
+
+</html>
