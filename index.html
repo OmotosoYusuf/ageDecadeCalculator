@@ -16,23 +16,49 @@
         body {
             background-color: rgba(35, 35, 75, 0.795);
             color: goldenrod;
-            font-size: 1.5em;
+            /* font-size: 1.5em; */
             font-weight: 900;
             width: 50%;
-            margin: 15% auto;
-            text-align: center;
+            margin: 3% auto;
             border: 3px solid salmon;
-            padding: 5%; //add enough comments
+        }
+        .main{
+            padding: 10%;
+        }
+        .heading{
+            color: aliceblue;
+            padding-top: 0%;
+            margin-top: 0%;
         }
     </style>
 </head>
 
 <body>
+    <!-- Add comments -->
+
     <div class="main">
-        <div id="printResult"></div>
+
+        <h1 class="heading">Welcome, <br> to the Age and Decade Calculator</h1>
+        <h3>You sure get it, you can calculate your age and the number of decades you have spent living</h3>
+        <h4><strong>Interesting! Let's do it</strong></h4>
+
+        <!-- <div id="printResult"></div> -->
+
+        <label for="users-age">
+            <p>Please Enter Your Year of Birth:</p>
+            <input type="number" value="1990" id="year" minlength="4" maxlength="4" required>
+        </label>
+        
+
+        <input type="submit" value="Submit" id="submit" onclick="calculateAll()">
+
+        <p class="age"></p>
+
+        <p class="result"></p>
+
     </div>
 
-<script src="getBirthAndDecade.js"></script>
+    <script src="getBirthAndDecade.js"></script>
 </body>
 
 </html>
