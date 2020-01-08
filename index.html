@@ -30,6 +30,12 @@
             padding-top: 0%;
             margin-top: 0%;
         }
+        .title{
+            color: orange;
+            font-size: 1.2em;
+            font-weight: bold;
+        
+        }
     </style>
 </head>
 
@@ -39,16 +45,15 @@
     <div class="main">
 
         <h1 class="heading">Welcome, <br> to the Age and Decade Calculator</h1>
-        <h3>You sure get it, you can calculate your age and the number of decades you have spent living</h3>
+        <h3>You sure get it, you can calculate your age and the number of decades you here</h3>
         <h4><strong>Interesting! Let's do it</strong></h4>
 
         <!-- <div id="printResult"></div> -->
 
         <label for="users-age">
-            <p>Please Enter Your Year of Birth:</p>
+            <p class="title">Please Enter Your Year of Birth:</p>
             <input type="number" value="1990" id="year" minlength="4" maxlength="4" required>
-        </label>
-        
+        </label>        
 
         <input type="submit" value="Submit" id="submit" onclick="calculateAll()">
 

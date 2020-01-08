@@ -53,7 +53,7 @@ function calculateAll() {
         decadeValue = Math.floor(decade);
 
         //content to be displayed on he screen as/with result
-        text2 = '<br> You have lived for ' + decadeValue + ' decade(s).';
+        text2 = 'You have lived for ' + decadeValue + ' decade(s).';
         document.querySelector('.result').innerHTML = text2;
     } else if (age === aDecade){
 
